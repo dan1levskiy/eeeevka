@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-notary-red: #A53327;
+  --color-notary-orange: #FA9749;
+  --color-notary-parchment: #E6CCAE;
+  --color-notary-sage: #B2C3A1;
+  --color-notary-teal: #719B87;
+  --color-notary-rose: #966D7E;
+}
+
+@layer base {
+  body {
+    @apply bg-notary-parchment text-notary-red font-sans antialiased selection:bg-notary-orange selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
+.leaf-pattern {
+  background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
+  opacity: 0.1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E6CCAE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A53327;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FA9749;
+}
